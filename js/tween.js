@@ -27,11 +27,29 @@ var tween2 = TweenMax.from('#think-that', 1, {
 // create a scene
 new ScrollMagic.Scene({
 		triggerElement: '#think-that',
-		offset: 250 /* offset the trigger 150px below #scene's top */
+		offset: 250, /* offset the trigger 150px below #scene's top */
+		duration: 650
 	})
 	.setTween(tween2)
     .setPin('#think-that') // pins the element for the the scene's duration
     .addTo(controller) // assign the scene to the controller
     .addIndicators();
 
+var slides = document.querySelectorAll("section.panel");
+for (var i = 0; i<slides.length; i++){
+
+	new ScrollMagic.Scene({
+		triggerElement:slides[i],
+		offset: 400
+	})
+	.setPin(slides[i])
+	.addIndicators()
+	.addTo(controller);
+
+}
+
 });
+
+
+
+

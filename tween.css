@@ -23,9 +23,47 @@ body {
   margin-right: auto;
 }
 
-#when-i-was, #think-that {
+#when-i-was, #think-that, #porkchops-karatechops {
   opacity: 1;
   font-size: 40px;
+}
+
+#porkchops-karatechops {
+  position: relative;
+  z-index: 1;
+  padding-top: 500px;
+  font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.panel {
+  min-width: 100%;
+  min-height: 100%;
+  margin-top: -100px;
+  margin-bottom: 500px;
+    font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.porkchops, .karatechops, .same-thing {
+  font-size: 42px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.porkchops {
+  background-color: #FFCCFF;
+}
+
+.karatechops {
+  background-color: #fff;
+}
+
+.same-thing {
+  text-align: center;
+  background-color: #FF6666;
 }
 
 /* Styles for wrap for demo */
