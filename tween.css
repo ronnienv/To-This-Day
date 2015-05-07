@@ -1,9 +1,15 @@
 /* Create huge scrolling area (imitates height of a page) */
 main { padding: 200px 0 1500px 0; overflow: hidden; }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url("DK Lemon Yellow Sun.otf");
+}
+
 body {
   background-color: #0f1d2a;
   color: #fff;
+  font-family: myFirstFont;
 }
 
 #title {
@@ -33,24 +39,25 @@ body {
   z-index: 1;
   padding-top: 500px;
   font-weight: bold;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
 }
 
 .panel {
+  color: #000;
   min-width: 100%;
   min-height: 100%;
-  margin-top: -100px;
-  margin-bottom: 500px;
-    font-weight: bold;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+  margin-bottom: 800px;
+  font-weight: bold;
 }
 
 .porkchops, .karatechops, .same-thing {
   font-size: 42px;
   padding-top: 100px;
   text-align: center;
+}
+
+.porkchops-small {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .porkchops {
@@ -64,6 +71,14 @@ body {
 .same-thing {
   text-align: center;
   background-color: #FF6666;
+}
+
+.reset {
+  background-color: #0f1d2a
+}
+
+.equals {
+  font-size: 250px;
 }
 
 /* Styles for wrap for demo */
