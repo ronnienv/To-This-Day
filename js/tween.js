@@ -20,7 +20,7 @@ $(document).ready(function() {
 	new ScrollMagic.Scene({
 		triggerElement: '#when-i-was',
 		offset: 200,
-		duration: 1500
+		duration: 2000
 	})
 	.setPin('#when-i-was') // pins the element for the the scene's duration
 	.addTo(controller) // assign the scene to the controller
@@ -43,7 +43,7 @@ $(document).ready(function() {
 	new ScrollMagic.Scene({
 		triggerElement: '#think-that',
 		offset: 200,
-		duration: 1500
+		duration: 2000
 	})
 	.setPin('#think-that') // pins the element for the the scene's duration
 	.addTo(controller) // assign the scene to the controller
@@ -86,7 +86,8 @@ $(document).ready(function() {
 
 	new ScrollMagic.Scene({
 		triggerElement: '.grandma',
-		offset: 100
+		offset: 100,
+		duration: 1000
 	})
 	.setTween(tween3)
 	.addTo(controller)
@@ -116,18 +117,18 @@ $(document).ready(function() {
 
 	var wipeAnimation = new TimelineMax()
 		.fromTo("section.dir-panel.before-realized", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
-		.fromTo("section.dir-panel.fell-out", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
-		.fromTo("section.dir-panel.bruised", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.fell-out", 1, {y:"-100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.bruised", 1, {x:"100%"}, {x:"0%", ease: Linear.easeNone});
 
 	new ScrollMagic.Scene ({
 		triggerElement: "#climbing-tree",
 		triggerHook: "onLeave",
-		duration: "100%"
+		duration: 10000
 	})
 	.setPin("#climbing-tree")
 	.setTween(wipeAnimation)
 	.addIndicators()
-	.addTo(controller)
+	.addTo(controller);
 
 	/////////// climbing tree end ////////////////
 
