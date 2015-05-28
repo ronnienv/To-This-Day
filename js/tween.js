@@ -117,8 +117,11 @@ $(document).ready(function() {
 
 	var wipeAnimation = new TimelineMax()
 		.fromTo("section.dir-panel.before-realized", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
 		.fromTo("section.dir-panel.fell-out", 1, {y:"-100%"}, {y:"0%", ease: Linear.easeNone})
-		.fromTo("section.dir-panel.bruised", 1, {x:"100%"}, {x:"0%", ease: Linear.easeNone});
+		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.bruised", 1, {x:"100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone});
 
 	new ScrollMagic.Scene ({
 		triggerElement: "#climbing-tree",
@@ -127,10 +130,74 @@ $(document).ready(function() {
 	})
 	.setPin("#climbing-tree")
 	.setTween(wipeAnimation)
-	.addIndicators()
 	.addTo(controller);
 
 	/////////// climbing tree end ////////////////
+
+	////////// not tell grandma ////////////////
+
+	var tweenNotTell = TweenMax.from('#not-tell-grandma', 1, {
+		opacity: 0
+	});
+
+	new ScrollMagic.Scene({
+			triggerElement: '#not-tell-grandma',
+			offset: 400, 
+			duration: 400
+	})
+	.setTween(tweenNotTell)
+	.addTo(controller)
+
+	new ScrollMagic.Scene({
+		triggerElement: '#not-tell-grandma',
+		offset: 300,
+		duration: 2000
+	})
+	.setPin('#not-tell-grandma') 
+	.addTo(controller) 
+
+	new ScrollMagic.Scene({
+		triggerElement: "#scared-shed-yell",
+		duration: 1800,
+		offset: 300
+	})
+	.setPin('#scared-shed-yell')
+	.addTo(controller)
+
+	new ScrollMagic.Scene({
+		triggerElement: "#playing-where-shouldnt",
+		offset: 200,
+		duration:1800
+	})
+	.setPin('#playing-where-shouldnt')
+	.addTo(controller)
+
+	//////// not tell grandma end ///////////
+
+	/////// gym teacher /////////////////////
+
+	var wipeAnimation = new TimelineMax()
+		.fromTo("section.dir-panel.teacher-noticed", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.got-sent", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.another-room", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.nice-lady", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.asked-questions", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone});
+
+	new ScrollMagic.Scene ({
+		triggerElement: "#teacher-part",
+		triggerHook: "onLeave",
+		duration: 10000
+	})
+	.setPin("#teacher-part")
+	.setTween(wipeAnimation)
+	.addTo(controller);
+
+	////// gym teacher end //////////////////
 
 });
 
