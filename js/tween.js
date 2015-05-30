@@ -99,7 +99,7 @@ $(document).ready(function() {
 	new ScrollMagic.Scene({
 		triggerElement: '#no-big-deal',
 		offset: 100,
-		duration: 1200
+		duration: 2000
 	})
 	.setPin('#no-big-deal')
 	.addTo(controller)
@@ -108,7 +108,7 @@ $(document).ready(function() {
 	new ScrollMagic.Scene({
 		triggerElement: '#one-day',
 		offset:100,
-		duration: 1200
+		duration: 2000
 	})
 	.setPin('#one-day')
 	.addTo(controller)
@@ -126,7 +126,7 @@ $(document).ready(function() {
 	new ScrollMagic.Scene ({
 		triggerElement: "#climbing-tree",
 		triggerHook: "onLeave",
-		duration: 10000
+		duration: 24000
 	})
 	.setPin("#climbing-tree")
 	.setTween(wipeAnimation)
@@ -151,14 +151,14 @@ $(document).ready(function() {
 	new ScrollMagic.Scene({
 		triggerElement: '#not-tell-grandma',
 		offset: 300,
-		duration: 2000
+		duration: 3000
 	})
 	.setPin('#not-tell-grandma') 
 	.addTo(controller) 
 
 	new ScrollMagic.Scene({
 		triggerElement: "#scared-shed-yell",
-		duration: 1800,
+		duration: 3000,
 		offset: 300
 	})
 	.setPin('#scared-shed-yell')
@@ -167,7 +167,7 @@ $(document).ready(function() {
 	new ScrollMagic.Scene({
 		triggerElement: "#playing-where-shouldnt",
 		offset: 200,
-		duration:1800
+		duration:3000
 	})
 	.setPin('#playing-where-shouldnt')
 	.addTo(controller)
@@ -186,12 +186,14 @@ $(document).ready(function() {
 		.fromTo("section.dir-panel.nice-lady", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
 		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
 		.fromTo("section.dir-panel.asked-questions", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.life-at-home", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
 		.fromTo("section.dir-panel.filler", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone});
 
 	new ScrollMagic.Scene ({
 		triggerElement: "#teacher-part",
 		triggerHook: "onLeave",
-		duration: 10000
+		duration: 24000
 	})
 	.setPin("#teacher-part")
 	.setTween(wipeAnimation)

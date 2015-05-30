@@ -114,7 +114,7 @@ body {
   padding-bottom: 100px;
 }
 
-#no-big-deal, #one-day, #climbing-tree, #playing-where-shouldnt, .teacher-noticed, .got-sent, .asked-questions{
+#no-big-deal, #one-day, #climbing-tree, #playing-where-shouldnt{
   text-align: center;
   color: #fff;
   font-size: 48px;
@@ -219,10 +219,11 @@ body {
   color: #000;
 }
 
-.teacher-noticed p, .got-sent p, .asked-questions p{
+.teacher-noticed p, .got-sent p, .asked-questions p, .life-at-home{
   color: #fff;
   font-size: 48px;
   text-shadow: 0px 0px 4px #000;
+  text-align: center;
 }
 
 .teacher-noticed{
@@ -257,6 +258,11 @@ body {
 .asked-questions {
   background-image: url("img/asked-questions.jpg");
   z-index: 5;
+}
+
+.life-at-home {
+  background-image: url("img/home.jpg");
+  z-index: 6; 
 }
 
 
