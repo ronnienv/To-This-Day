@@ -334,8 +334,6 @@ $(document).ready(function() {
 		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
 		.fromTo("section.dir-panel.as-if", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
 		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
-		.fromTo("section.dir-panel.hurt-more", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
-		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
 		.fromTo("section.dir-panel.them-all", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
 		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone});
 
@@ -354,6 +352,75 @@ $(document).ready(function() {
 		duration: 2500
 	})
 	.setPin('#grew-up') // pins the element for the the scene's duration
+	.addTo(controller) // assign the scene to the controller
+
+	var tweenNames = TweenMax.from('#no-one', 2, {
+		opacity: 0
+	});
+	// create a scene
+	new ScrollMagic.Scene({
+			triggerElement: '#no-one',
+			offset: 600, /* offset the trigger 150px below #scene's top */
+			duration: 400
+	})
+	.setTween(tweenNames)
+	.addTo(controller) // assign the scene to the controller
+
+	new ScrollMagic.Scene({
+		triggerElement: '#no-one',
+		offset: 200,
+		duration: 3500
+	})
+	.setPin('#no-one') // pins the element for the the scene's duration
+	.addTo(controller) // assign the scene to the controller
+
+	new ScrollMagic.Scene({
+		triggerElement: '#lonely-forever',
+		offset: 200,
+		duration: 2000
+	})
+	.setPin('#lonely-forever') // pins the element for the the scene's duration
+	.addTo(controller) // assign the scene to the controller
+
+	new ScrollMagic.Scene({
+		triggerElement: '#never-meet',
+		offset: 200,
+		duration: 2500
+	})
+	.setPin('#never-meet') // pins the element for the the scene's duration
+	.addTo(controller) // assign the scene to the controller
+
+	var wipeMonologue2 = new TimelineMax()
+		.fromTo("section.dir-panel.sun", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.tool-shed", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.blues", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.empty-ourselves", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.feel-nothing", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.broken-bone", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.clean-up", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone});
+
+	new ScrollMagic.Scene ({
+		triggerElement: "#monologue-2",
+		triggerHook: "onLeave",
+		duration: 20000
+	})
+	.setPin("#monologue-2")
+	.setTween(wipeMonologue2)
+	.addTo(controller);
+
+	new ScrollMagic.Scene({
+		triggerElement: '#the-end',
+		offset: 400,
+		duration: 2500
+	})
+	.setPin('#the-end') // pins the element for the the scene's duration
 	.addTo(controller) // assign the scene to the controller
 
 	////// monologue end /////
