@@ -323,6 +323,41 @@ $(document).ready(function() {
 	.setPin('#hate') // pins the element for the the scene's duration
 	.addTo(controller) // assign the scene to the controller
 
+	/////// monologue ////////
+
+	var wipeMonologue = new TimelineMax()
+		.fromTo("section.dir-panel.hallway", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.surrounded", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.rhyme", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.as-if", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.hurt-more", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.them-all", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+		.fromTo("section.dir-panel.filler", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone});
+
+	new ScrollMagic.Scene ({
+		triggerElement: "#monologue",
+		triggerHook: "onLeave",
+		duration: 20000
+	})
+	.setPin("#monologue")
+	.setTween(wipeMonologue)
+	.addTo(controller);
+
+	new ScrollMagic.Scene({
+		triggerElement: '#grew-up',
+		offset: 200,
+		duration: 2500
+	})
+	.setPin('#grew-up') // pins the element for the the scene's duration
+	.addTo(controller) // assign the scene to the controller
+
+	////// monologue end /////
+
 });
 
 

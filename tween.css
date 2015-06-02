@@ -133,7 +133,7 @@ p, img {
   padding-bottom: 100px;
 }
 
-#no-big-deal, #one-day, #climbing-tree, #playing-where-shouldnt, #as-far-as, #to-this-day, #hate{
+#no-big-deal, #one-day, #climbing-tree, #playing-where-shouldnt, #as-far-as, #to-this-day, #hate, #grew-up{
   text-align: center;
   color: #fff;
   font-size: 48px;
@@ -212,7 +212,8 @@ p, img {
   background-image: url("img/scared-shed-yell.jpg");
 }
 
-#not-tell-grandma, #scared-shed-yell, #lie, #life-was-good, #whenever-im-sad, #gives-chops, .nickname{
+#not-tell-grandma, #scared-shed-yell, #lie, #life-was-good, #whenever-im-sad, #gives-chops, .nickname, .hallway,
+.surrounded, .rhyme, .as-if, .hurt-more, .them-all{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -222,14 +223,14 @@ p, img {
   color: #fff;
   font-size: 48px;
   text-align: center;
-  padding-top-top: 550px;
 }
 
 #not-tell-grandma p , #scared-shed-yell p, #lie p, #life-was-good p, #whenever-im-sad p, #gives-chops p{
   padding-top: 150px;
 }
 
-.teacher-noticed, .got-sent, .another-room, .asked-questions, .led-to, .removed, .how, .rumors, .earned-nickname, .nickname{
+.teacher-noticed, .got-sent, .another-room, .asked-questions, .led-to, .removed, .how, .rumors, 
+.earned-nickname, .nickname{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -238,7 +239,8 @@ p, img {
   color: #000;
 }
 
-.teacher-noticed p, .got-sent p, .asked-questions p, .life-at-home, #lie, #life-was-good,  #gives-chops p{
+#not-tell-grandma, #scared-shed-yell, .teacher-noticed p, .got-sent p, .asked-questions p, 
+.life-at-home, #lie, #life-was-good,  #gives-chops p{
   color: #fff;
   font-size: 48px;
   text-shadow: 0px 0px 7px #000;
@@ -357,5 +359,54 @@ p, img {
 
 .hate {
   color: red;
+}
+
+.hallway {
+  background-image: url("img/hallway.jpg");
+  z-index: 1;
+}
+
+.hallway p{
+  padding-top: 100px;
+  color: #fff;
+  font-size: 48px;
+  text-shadow: 0px 0px 7px #000;
+  text-align: center;
+}
+
+.surrounded p, .as-if p{
+  color: #fff;
+  font-size: 48px;
+  text-shadow: 0px 0px 7px #000;
+  text-align: center;
+}
+
+.surrounded{
+  padding-top: 150px;
+  z-index: 2;
+}
+
+.rhyme {
+  background-image: url("img/rhyme.jpg");
+  z-index: 3;
+}
+
+.as-if {
+  padding-top: 120px;
+  z-index: 4;
+}
+
+.hurt-more {
+  padding-top: 170px;
+  z-index: 5;
+}
+
+.them-all {
+  padding-top: 300px;
+  z-index: 6;
+}
+
+#grew-up {
+  z-index: 0;
 }
 
